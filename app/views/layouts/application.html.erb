@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>SaasSite</title>
+  <%= favicon_link_tag 'favicon.ico' %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -23,13 +24,17 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to 'About' , about_path %></li>
+            <li><%= link_to 'About Us' , about_path %></li>
             <li><%= link_to 'Contact Us' , new_contacts_path %></li>
           </ul>
         </div>
       </div>
     </nav>
     <div class ="container">
+        <%= flash.each do |key,value| %>
+            <%= content_tag :div , value , class: "alert alert-#{key}" %>   
+        <%= end %>  
+        
          <%= yield %>
     </div>
 </body>
