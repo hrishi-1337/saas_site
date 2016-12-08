@@ -2,7 +2,7 @@ class ContactsController < ApplicationController
     def create
     end
 
-    def new
-        @contact = Contact.new
+    def current
+        @contact = Contact.current
     end
 end
