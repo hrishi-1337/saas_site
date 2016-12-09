@@ -54,5 +54,6 @@ group :development do
   gem 'spring'
   gem 'devise'
   gem 'rake'
+  gem 'rack-timeout', '0.3.2'
 end
 
