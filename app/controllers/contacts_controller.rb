@@ -15,11 +15,11 @@ class ContactsController < ApplicationController
         else
             flash[:danger] = 'Error occured'
             redirect_to new_contacts_path
+        end
     end
     
     private
         def contact_params
             params.require(:contact).permit(:name, :email, :comments)
         end
-    end
 end
