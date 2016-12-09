@@ -9,6 +9,9 @@ gem 'sqlite3' , group: [:development , :test]
 gem 'bootstrap-sass', '3.3.6'
 #Use font awesome library for icons
 gem 'font-awesome-sass', '~> 4.7.0'
+gem 'devise'
+gem 'rake'
+gem 'rack-timeout', '0.3.2'
 #Use postgrsql as database for production
 group :production do
     gem 'pg' , '0.19.0'
@@ -52,8 +55,6 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-  gem 'devise'
-  gem 'rake'
-  gem 'rack-timeout', '0.3.2'
+
 end
 
